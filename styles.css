@@ -1,0 +1,186 @@
+/* Global */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f8f8f8;
+    color: #ffffff;
+    transition: background 0.3s, color 0.3s;
+    overflow-x: hidden;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: #1f0a1d;
+    color: #f8f4f4;
+}
+
+#reactor-title {
+    font-size: 2rem;
+    font-weight: bold;
+    transition: transform 0.3s, color 0.3s;
+}
+
+#reactor-title:hover {
+    color: #5315fd;
+    transform: scale(1.1);
+}
+
+.theme-toggle {
+    padding: 8px 15px;
+    font-size: 1rem;
+    background: #e9e9e9;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.theme-toggle:hover {
+    background: #0044ff;
+}
+
+/* Contêiner com fundo atrás da calculadora */
+.calculator-container {
+    background: url('./gif/212968_medium.gif') no-repeat center center;
+    background-size: cover;
+    min-height: 100vh; /* Garante que o fundo cubra a altura da tela */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Calculadora */
+.calculator {
+    width: 300px;
+    height: 430px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Display da calculadora */
+.display {
+    text-align: right;
+    background: #000000;
+    color: #fff4f4;
+    padding: 15px;
+    font-size: 2rem; /* Aumentando o tamanho da fonte */
+    border-bottom: 2px solid #020202;
+    overflow: hidden; /* Impede que o conteúdo ultrapasse o display */
+}
+
+/* Botões da calculadora */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: #7f7f81;
+}
+
+/* Ajustar botões para evitar overflow */
+button {
+    height: 65px; /* Aumentando a altura dos botões */
+    font-size: 1.4rem;
+    background: #f1f1f1;
+    border: none;
+    cursor: pointer;
+}
+
+button.operator {
+    background: #325c2c;
+    color: #fff;
+}
+
+button:hover {
+    background: #ddd;
+}
+
+button.span-two {
+    grid-column: span 2;
+}
+
+/* Rodapé */
+footer {
+    background: #1f0a1d;
+    color: #ffffff;
+    text-align: center;
+    padding: 15px 10px;
+    border-top: 2px solid #000000;
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.5);
+    position: relative; /* Mudar de fixed para relative */
+    width: 100%;
+    margin-top: 0px; /* Aumenta o espaçamento superior para não sobrepor a calculadora */
+}
+
+footer h2 {
+    margin-bottom: 10px;
+}
+
+.contacts {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.contacts a {
+    color: #000000;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    font-size: 1.2em;
+    margin: 10px;
+    padding: 5px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.contacts a:hover {
+    color: #007bff; /* Cor azul do hover */
+    transform: scale(1.1);
+}
+
+/* Estilização dos ícones de contato */
+.contact-icon {
+    width: 30px; /* Ajuste o tamanho do ícone */
+    height: 30px;
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+}
+
+/* Efeito de hover na imagem */
+.contacts a:hover .contact-icon {
+    transform: scale(1.2); /* Aumenta o tamanho do ícone ao passar o mouse */
+}
+
+/* Tema Escuro */
+body.dark {
+    background: #e5ead4;
+    color: #f8f4f4e8;
+}
+
+body.dark header {
+    background: black;
+}
+
+body.dark .theme-toggle {
+    background: #0066ff;
+}
+
+body.dark .calculator {
+    background: #333;
+}
+
+body.dark .display {
+    background: #111;
+}
+
+body.dark footer {
+    background: #4d1717f6;
+    border-top-color: #fdfdfd;
+}
